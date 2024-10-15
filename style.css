@@ -1,0 +1,419 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Header*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    color: aqua;
+    text-shadow: 0 0 25px aqua,
+                 0 0 50px aqua;
+    transform: scale(1.1);
+}
+
+span{
+    color: aqua;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.aktif{
+    color: aqua;
+    border-bottom: 2px solid aqua;
+}
+
+.kontak{
+    padding: 10px 30px;
+    background-color: azure;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: 550;
+    transition: 0.3s ease;
+}
+
+.kontak:hover{
+    background-color: aqua;
+    color: white;
+}
+
+/*Section*/
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: white ;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 15% 0;
+}
+
+.konten-home{
+    max-width: 800px;
+}
+
+.konten-home h3{
+    font-size: 40px;
+}
+
+.konten-home h1{
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.konten-home p{
+    font-size: 16px;
+    margin: 25px 0 30px;
+}
+
+.img-box img{
+    border-radius: 100%;
+    width: 300px;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: aqua;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;
+    background-color: rgb(22, 51, 22);  
+}
+
+.about-img img{
+    position: relative;
+    width: 550px;
+    box-shadow: 0 0 25px aqua, 
+                0 0 50px aqua;
+    border-radius: 50%;
+}
+
+.about-konten h2{
+    text-align: left;
+    color: white;
+    font-size: 40px;
+}
+
+.about-konten p{
+    color: white;
+    font-size: 22px;
+    margin: 3em 0 4em;
+}
+
+.form-kontak h2{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    font-size: 30px;
+}
+
+.form-kontak form{
+    max-width: 50em;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.form-kontak form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-kontak form .input-box input, .form-kontak form textarea{
+    width: 100%;
+    padding: 2em;
+    font-size: 16px;
+    color: black;
+    background: white;
+    border: 0.9rem;
+    margin: 1rem 0;
+    resize: none;
+}
+
+.tombol-1{
+    padding: 15px 28px;
+    background-color: rgb(17, 83, 17);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/*Footer*/
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: gray;
+}
+
+.footer .sosial-media{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.footer .sosial-media a{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    border: 2px solid aqua;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px aqua,
+                0 0 10px aqua;
+    transition: 0.3s ease;
+}
+
+.footer .sosial-media a:hover{
+    transform: scale(1.2) translateY(-10px);
+    color: aqua;
+    border: 2px solid transparent;
+}
+
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+/* Media Queries untuk membuat tampilan responsif */
+/* Tablet */
+@media (max-width: 1024px) {
+    .home {
+        flex-direction: column;
+        padding: 50px 5%;
+    }
+    
+    .about {
+        flex-direction: column;
+        padding: 10% 5%;
+    }
+    
+    .about-img img {
+        width: 400px;
+    }
+    
+    .konten-home h3 {
+        margin-top: 60px;
+        font-size: 35px;
+    }
+    
+    .konten-home h1 {
+        font-size: 25px;
+    }
+    
+    .konten-home p {
+        font-size: 14px;
+    }
+}
+
+/* Handphone */
+@media (min-width: 320px) and (max-width: 480px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .kontak {
+        padding: 5px 20px;
+        font-size: 12px;
+    }
+
+    .home {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    .konten-home h3 {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    .konten-home h1 {
+        font-size: 20px;
+    }
+
+    .konten-home p {
+        font-size: 12px;
+    }
+
+    .img-box img {
+        width: 200px;
+    }
+
+    .about-img img {
+        width: 300px;
+    }
+
+    .about-konten h2 {
+        font-size: 30px;
+    }
+
+    .about-konten p {
+        font-size: 18px;
+    }
+
+    .form-kontak h2 {
+        font-size: 25px;
+    }
+
+    .form-kontak form .input-box input, .form-kontak form textarea {
+        padding: 1.5em;
+        font-size: 14px;
+    }
+
+    .tombol-1 {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+}
+
+/* Media Queries untuk layar 1025px hingga 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .header {
+        padding: 30px 10%;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .navbar a {
+        font-size: 17px;
+    }
+
+    .kontak {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+
+    .home {
+        padding: 80px 10%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .konten-home {
+        max-width: 55%;
+    }
+
+    .konten-home h1 {
+        font-size: 36px;
+        line-height: 1.3;
+    }
+
+    .konten-home p {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+
+    .img-box img {
+        width: 350px;
+    }
+
+    .about {
+        padding: 8% 5%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-img img {
+        width: 350px;
+    }
+
+    .about-konten {
+        max-width: 55%;
+    }
+
+    .about-konten h2 {
+        font-size: 30px;
+    }
+
+    .about-konten p {
+        font-size: 16px;
+    }
+
+    .form-kontak form {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    .form-kontak form input,
+    .form-kontak form textarea {
+        font-size: 15px;
+    }
+
+    .footer .sosial-media a {
+        font-size: 22px;
+    }
+
+    .footer {
+        padding: 20px 10%;
+    }
+}
